@@ -66,4 +66,3 @@ edmc(D, method="dpf", d=3, toler=1e-8)
 \references{
 Trosset, M.W. (2000). Distance Matrix Completion by Numerical Optimization.Computational Optimization and Applications, 17, 11–22, 2000.
 }
-

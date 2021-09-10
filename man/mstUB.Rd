@@ -24,4 +24,3 @@ A <- dist(cbind(rnorm(10,0,1),rnorm(10,0,1)))
 mstUB(as.matrix(A))
 
 }
-

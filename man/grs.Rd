@@ -45,4 +45,3 @@ edmc(D, method="grs", d=3)
 \references{
 Rahman, D., & Oldford, R.W. (2016). Euclidean Distance Matrix Completion and Point Configurations from the Minimal Spanning Tree.
 }
-

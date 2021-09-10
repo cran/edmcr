@@ -39,4 +39,3 @@ gram2edm(G)
 \seealso{
 \code{\link{edm2gram}}
 }
-

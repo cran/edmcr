@@ -62,4 +62,3 @@ Nathan Krislock and Henry Wolkowicz. Explicit sensor network localization
 using semidefinite representations and facial reductions. SIAM Journal on
 Optimization, 20(5):2679-2708, 2010.
 }
-

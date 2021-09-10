@@ -35,20 +35,22 @@
 #'
 #'@examples
 #'
+#'\donttest{
 #'D <- matrix(c(0,3,4,3,4,3,
 #'              3,0,1,NA,5,NA,
 #'              4,1,0,5,NA,5,
 #'              3,NA,5,0,1,NA,
 #'              4,5,NA,1,0,5,
-#'              3,NA,5,NA,5,0),byrow=TRUE, nrow=6)
+#'              3,NA,5,NA,5,0), byrow=TRUE, nrow=6)
 #'A <- matrix(c(1,1,1,1,1,1,
 #'              1,1,1,0,1,0,
 #'              1,1,1,1,0,1,
 #'              1,0,1,1,1,0,
 #'              1,1,0,1,1,1,
 #'              1,0,1,0,1,1), byrow=TRUE, nrow=6)
-#'
+#'              
 #'edmc(D, method="sdp", A=A, toler=1e-2)
+#'}
 #'
 #'@seealso \code{\link{psd2edm}}
 #'
@@ -156,7 +158,7 @@ sdp <- function(D,A,toler=1e-8){
   Y <- y * rep(1,n-1)
   X <- x * matrix(1,n-1,n-1) + diag(n-1)
   
-  V <- as.matrix(rBind(Y,X))
+  V <- as.matrix(rbind(Y,X)) # defunct as.matrix(rBind(Y,X))
   V <- Matrix(V, sparse=TRUE)
   
   B <- -.5*(t(V) %*% D %*% V)
@@ -198,7 +200,8 @@ sdp <- function(D,A,toler=1e-8){
   Ku <- Result[[1]]
   lowinds <- Result[[2]]
   
-  Kop <- rBind(Ku, matrix(0,nrow=nrow(Ku),ncol=ncol(Ku)))
+  Kop <- rbind(Ku, matrix(0,nrow=nrow(Ku),ncol=ncol(Ku))) 
+         # defunct rBind(Ku, matrix(0,nrow=nrow(Ku),ncol=ncol(Ku)))
   
   noiter <- 0
   
@@ -216,7 +219,7 @@ sdp <- function(D,A,toler=1e-8){
     }
   
     Kd <- sdpFpmulow(Lam,X,lowinds,V,A)
-    Kop <- Matrix(rBind(Kop[1:(n1^2),1:(2*tn1)], Kd), sparse=TRUE)
+    Kop <- Matrix(rbind(Kop[1:(n1^2),1:(2*tn1)], Kd), sparse=TRUE) # defunct rBind
     
     if(any(is.na(Kop))){
       stop("NaN found in Kop")
@@ -258,13 +261,13 @@ sdp <- function(D,A,toler=1e-8){
     tdX <- Result2[[1]]
     tdLam <- Result2[[2]]
     
-    check1 <- rBind(tdX,tdLam)
+    check1 <- rbind(tdX,tdLam)# defunct rBind
     
     Result3 <- sdpFpmus(Fd,Fc,Lam,X,V,A)
     trhs1 <- Result3[[2]]
     trhs2 <- Result3[[1]]
     
-    check2 <- rBind(trhs2, trhs1) 
+    check2 <- rbind(trhs2, trhs1)  # defunct rBind
     
     check <- check1 + check2
     #normcheck <- sdpnormest(check)/max(1,sdpnormest(check2))
@@ -305,13 +308,13 @@ sdp <- function(D,A,toler=1e-8){
     tdX <- Result2[[1]]
     tdLam <- Result2[[2]]
     
-    check1 <- rBind(tdX,tdLam)
+    check1 <- rbind(tdX,tdLam) # defunct rBind
     
     Result3 <- sdpFpmus(Fd,Fc,Lam,X,V,A)
     trhs1 <- Result3[[2]]
     trhs2 <- Result3[[1]]
     
-    check2 <- rBind(trhs2, trhs1)
+    check2 <- rbind(trhs2, trhs1)# defunct rBind
     
     check <- check1 + check2
     #normcheck <- sdpnormest(check)/max(1,sdpnormest(check2))

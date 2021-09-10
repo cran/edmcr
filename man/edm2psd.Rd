@@ -35,4 +35,3 @@ edm2psd(as.matrix(D))
 \seealso{
 \code{\link{psd2edm}} \code{\link{edm2gram}}
 }
-

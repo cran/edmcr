@@ -4,7 +4,9 @@
 \name{sprosr_aco}
 \alias{sprosr_aco}
 \title{Demo Data - ACO}
-\format{data.frame}
+\format{
+data.frame
+}
 \usage{
 data(sprosr_aco)
 }
@@ -12,4 +14,3 @@ data(sprosr_aco)
 Demo Data - ACO
 }
 \keyword{datasets}
-

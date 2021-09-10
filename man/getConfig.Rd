@@ -42,4 +42,3 @@ DStar <- dpf(D,d)$D
 getConfig(DStar,3)
 
 }
-

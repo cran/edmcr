@@ -21,7 +21,7 @@ than S.
 This is an implementation of the colamd function available in SuiteSparse, and also implemented in Matlab.
 }
 \examples{
-M <- matrix(c(1,1,0,0,1,0,0,1,0,1,1,1,1,1,0,0,1,0,1,0),ncol=4)
+M <- matrix(c(1,1,0,0,1,0,0,1,0,1,1,1,1,1,0,0,1,0,1,0), ncol=4)
 p <- colamdR(M)
 M[,p]
 
@@ -29,4 +29,3 @@ M[,p]
 \references{
 The authors of the code for "colamd" are Stefan I. Larimore and Timothy A. Davis (davis@cise.ufl.edu), University of Florida.
 }
-

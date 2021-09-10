@@ -4,7 +4,9 @@
 \name{A}
 \alias{A}
 \title{Molecule Metadata}
-\format{list}
+\format{
+list
+}
 \usage{
 data(A)
 }
@@ -12,4 +14,3 @@ data(A)
 Molecule Metadata
 }
 \keyword{datasets}
-

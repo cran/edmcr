@@ -44,23 +44,24 @@ It must satisfy the following conditions in order to be completed:
 }
 \examples{
 
+\donttest{
 D <- matrix(c(0,3,4,3,4,3,
              3,0,1,NA,5,NA,
              4,1,0,5,NA,5,
              3,NA,5,0,1,NA,
              4,5,NA,1,0,5,
-             3,NA,5,NA,5,0),byrow=TRUE, nrow=6)
+             3,NA,5,NA,5,0), byrow=TRUE, nrow=6)
 A <- matrix(c(1,1,1,1,1,1,
              1,1,1,0,1,0,
              1,1,1,1,0,1,
              1,0,1,1,1,0,
              1,1,0,1,1,1,
              1,0,1,0,1,1), byrow=TRUE, nrow=6)
-
+             
 edmc(D, method="sdp", A=A, toler=1e-2)
+}
 
 }
 \seealso{
 \code{\link{psd2edm}}
 }
-

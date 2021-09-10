@@ -26,4 +26,3 @@ primPath(as.matrix(A),1)
 primPath(as.matrix(A),2)
 
 }
-

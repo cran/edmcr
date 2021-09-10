@@ -4,7 +4,9 @@
 \name{sprosr_upl}
 \alias{sprosr_upl}
 \title{Demo Data - UPL}
-\format{data.frame}
+\format{
+data.frame
+}
 \usage{
 data(sprosr_upl)
 }
@@ -12,4 +14,3 @@ data(sprosr_upl)
 Demo Data - UPL
 }
 \keyword{datasets}
-

@@ -37,4 +37,3 @@ D <- psd2edm(S)
 \seealso{
 \code{\link{gram2edm}} \code{\link{edm2psd}}
 }
-

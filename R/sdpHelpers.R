@@ -37,7 +37,7 @@ sdpFpmulow <- function(Lam,X,lowinds,V,H){
   Kd1 <- Matrix(kronecker(En,Lam), sparse=TRUE) %*% Matrix(lowinds, sparse=TRUE)
   Kd2 <- Matrix(kronecker(X,En), sparse=TRUE) %*% Matrix(lowinds, sparse=TRUE)
   
-  Kd <- Matrix(cBind(Kd1,Kd2), sparse=TRUE)
+  Kd <- Matrix(cbind(Kd1,Kd2), sparse=TRUE) # defunct cBind
   
   return(Kd)
 }
@@ -104,7 +104,7 @@ sdpFpmuup <- function(V,H,n1){
   Ku <- Matrix(Ku,sparse=TRUE)
   Ku2 <- Matrix(Ku2, sparse=TRUE)
   
-  Ku <- Matrix(cBind(Ku, Ku2), sparse=TRUE)
+  Ku <- Matrix(cbind(Ku, Ku2), sparse=TRUE)
   
   return(list(Ku = Ku, lowinds = lowinds))
   

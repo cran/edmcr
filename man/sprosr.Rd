@@ -4,8 +4,15 @@
 \alias{sprosr}
 \title{Semidefinite Programming-based Protein Structure Determination}
 \usage{
-sprosr(seq, aco, upl, hydrogen_omission = 1, f = c(10, 10, 10, 10, 10),
-  in_max_res = NULL, in_min_res = NULL)
+sprosr(
+  seq,
+  aco,
+  upl,
+  hydrogen_omission = 1,
+  f = c(10, 10, 10, 10, 10),
+  in_max_res = NULL,
+  in_min_res = NULL
+)
 }
 \arguments{
 \item{seq}{A table containing the amino acid sequence of the protein in CYANA .seq format}
@@ -54,12 +61,7 @@ column 5: amino acid residue name of the second atom \cr
 column 6: atom name of the second atom \cr
 column 7: upper distance limit (in Angstroms) \cr
 }
-\examples{
-#Not Run
-
-}
 \references{
 Ramandi, Babak A., (2011). New Approaches to Protein NMR Automation. PhD Thesis.
 https://uwspace.uwaterloo.ca/bitstream/handle/10012/6389/Alipanahi_Ramandi_Babak.pdf;sequence=1
 }
-

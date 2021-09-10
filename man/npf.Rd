@@ -4,8 +4,16 @@
 \alias{npf}
 \title{Nonparametric Position Formulation}
 \usage{
-npf(D, A = NA, d, dmax = (nrow(D) - 1), decreaseDim = 1, stretch = NULL,
-  method = "Linear", toler = 1e-08)
+npf(
+  D,
+  A = NA,
+  d,
+  dmax = (nrow(D) - 1),
+  decreaseDim = 1,
+  stretch = NULL,
+  method = "Linear",
+  toler = 1e-08
+)
 }
 \arguments{
 \item{D}{An nxn partial-distance matrix to be completed. D must satisfy a list of conditions (see details), with unkown entries set to NA.}
@@ -75,4 +83,3 @@ edmc(D, method="npf", d=3, dmax=5)
 \seealso{
 \code{\link{gram2edm}}
 }
-

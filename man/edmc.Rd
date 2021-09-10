@@ -38,4 +38,3 @@ edmc(D,method = "dpf", d=3, toler=1e-8)
 \seealso{
 \code{\link{sdp}} \code{\link{npf}} \code{\link{dpf}} \code{\link{snl}} \code{\link{grs}}
 }
-

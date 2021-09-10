@@ -38,4 +38,3 @@ D <- dist(XY)
 edm2gram(as.matrix(D))
 
 }
-

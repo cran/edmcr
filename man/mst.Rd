@@ -24,4 +24,3 @@ D <- dist(cbind(X,Y))
 mst(as.matrix(D))
 
 }
-

@@ -4,7 +4,9 @@
 \name{sprosr_seq}
 \alias{sprosr_seq}
 \title{Demo Data - SEQ}
-\format{data.frame}
+\format{
+data.frame
+}
 \usage{
 data(sprosr_seq)
 }
@@ -12,4 +14,3 @@ data(sprosr_seq)
 Demo Data - SEQ
 }
 \keyword{datasets}
-
